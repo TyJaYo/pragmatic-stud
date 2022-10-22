@@ -1,4 +1,5 @@
 *.rbc
+.rubocop.yml
 capybara-*.html
 .rspec
 /db/*.sqlite3
