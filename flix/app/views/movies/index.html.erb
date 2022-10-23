@@ -1,16 +1,14 @@
 <% @movies.each do |movie| %>
-  <section class="movie">
-    <a class="summary" href="movies/<%= movie.title %>">
+  <section class='movie clearfix'>
       <h2>
-        <%= movie.title %>
+        <%= link_to movie.title, movie_path(movie.title) %>
       </h2>
       <h3>
         <%= total_gross(movie) %>
       </h3>
+      <p class='movie-description'>
       <%= image_tag(safe_title(movie), class: 'movie-poster') %>
-      <p>
         <%= truncate(movie.description, length: 150, separator: ' ') %>
       </p>
-    </a>
   </section>
 <% end %>
