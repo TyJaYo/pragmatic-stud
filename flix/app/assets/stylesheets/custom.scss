@@ -185,6 +185,7 @@ section.movie-details {
 
   .details {
     @extend .col-md-7, .text-start;
+    width: 90%;
   }
 
   aside {
