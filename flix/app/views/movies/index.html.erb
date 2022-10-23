@@ -1,7 +1,9 @@
 <ul>
   <% @movies.each do |movie| %>
-  <li><p><strong><%= movie.title %></strong> (<%= movie.rating %>): Grossed <%= number_to_currency(movie.total_gross / 1_000_000) %>MM. Released in <%= movie.released_on.year %>, on <%= movie.released_on.mon %>/<%= movie.released_on.mday %>.</p>
-    <p><%= movie.description %></p>
-    </li>
+  <li>
+    <p><strong><%= movie.title %></strong> (<%= movie.rating %>): <%= total_gross(movie) %>, released <%= movie.released_on.year %></p>
+    <p><%= truncate(movie.description, length: 40, separator: ' ') %>
+    </p>
+  </li>
   <% end %>
 </ul>
