@@ -6,4 +6,8 @@ module MoviesHelper
       number_to_currency(movie.total_gross, precision: 0)
     end
   end
+
+  def safe_title(movie)
+    movie.title.downcase.gsub(/\W+/, '-')
+  end
 end

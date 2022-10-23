@@ -1,0 +1,18 @@
+<section class="movie-details">
+  <div class="details">
+    <h1><%= @movie.title %></h1>
+    <h2>
+      <%= @movie.released_on.year %> &bull; <%= @movie.rating %>
+    </h2>
+    <%= image_tag(safe_title(@movie), class: 'movie-poster') %>
+    <p>
+      <%= @movie.description %>
+    </p>
+    <table>
+      <tr>
+        <th>Total Gross:</th>
+        <td><%= total_gross(@movie) %></td>
+      </tr>
+    </table>
+  </div>
+</section>
