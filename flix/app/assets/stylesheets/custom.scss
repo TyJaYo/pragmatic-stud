@@ -585,15 +585,3 @@ section.errors {
     top: 0;
   }
 }
-
-.movie-poster {
-  float: left;
-  margin-right: 20px;
-}
-
-a.summary {
-  cursor: pointer;
-  p {
-    color: var(--bs-body-color);
-  }
-}

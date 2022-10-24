@@ -1,15 +1,17 @@
 <% @movies.each do |movie| %>
-  <section class='movie clearfix'>
-      <h2>
-        <%= link_to movie.title, movie_path(movie.id) %>
-      </h2>
-      <h3>
-        <%= total_gross(movie) %>
-      </h3>
-      <p class='movie-description'>
-      <%= image_tag(safe_title(movie), class: 'movie-poster') %>
-        <%= truncate(movie.description, length: 150, separator: ' ') %>
-      </p>
+  <section class='movie'>
+    <div class="image">
+      <%= image_tag movie.image_file_name %>
+    </div>
+    <h2>
+      <%= link_to movie.title, movie_path(movie.id) %>
+    </h2>
+    <h3>
+      <%= total_gross(movie) %>
+    </h3>
+    <p class='movie-description'>
+      <%= truncate(movie.description, length: 150, separator: ' ') %>
+    </p>
   </section>
 <% end %>
 <section class="admin">
